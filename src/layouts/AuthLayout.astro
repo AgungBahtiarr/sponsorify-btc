@@ -31,15 +31,16 @@ const { title } = Astro.props;
 
             <div class="hidden md:block">
               <div class="flex gap-4 items-center">
-                <a href="#" class="font-semibold">Login</a>
+                <a href="/login" class="font-semibold">Login</a>
                 <a
-                  href="#"
+                  href="/register"
                   class="py-3 px-8 rounded-[40px] bg-white text-black font-semibold"
                   >Register</a
                 >
               </div>
             </div>
           </div>
+
           <slot />
         </div>
       </body>
