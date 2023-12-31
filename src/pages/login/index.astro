@@ -1,0 +1,76 @@
+---
+import AuthLayout from "../../layouts/AuthLayout.astro";
+import Button from "../../components/Button.astro";
+
+if (Astro.request.method === "POST") {
+  const data = await Astro.request.formData();
+  const email = data.get("email");
+  const password = data.get("password");
+
+  const response = await fetch("http://localhost:3000/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password,
+    }),
+  }).then((value) => {
+    return value.json();
+  });
+
+  if (response.status == true) {
+    return Astro.redirect("/");
+  } else {
+    return Astro.redirect("/login");
+  }
+}
+---
+
+<AuthLayout title="Login">
+  <div class="flex justify-center">
+    <h1 class="w-[234px] text-2xl text-center font-bold mt-[66px]">
+      Login to <span class="text-[#A8FF35]">Sponsorify</span> account
+    </h1>
+  </div>
+
+  <section class="flex justify-center items-center">
+    <div class="md:border mt-16 md:py-20 md:w-1/2 md:rounded-lg">
+      <form method="POST" class="flex flex-col items-center">
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Email</span>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            name="email"
+            class="input input-bordered w-full max-w-xs border-2"
+          />
+        </label>
+        <label class="form-control w-full max-w-xs mt-4">
+          <div class="label">
+            <span class="label-text">Password</span>
+          </div>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            class="input input-bordered w-full max-w-x border-2"
+          />
+        </label>
+
+        <div class="mt-6">
+          <Button>Login</Button>
+        </div>
+      </form>
+      <p class="flex justify-center gap-2 mt-16">
+        Haven't an account ? <a
+          href="/register"
+          class="font-bold text-[#A8FF35]">Register</a
+        >
+      </p>
+    </div>
+  </section>
+</AuthLayout>

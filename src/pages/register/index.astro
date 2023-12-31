@@ -1,0 +1,83 @@
+---
+import AuthLayout from "../../layouts/AuthLayout.astro";
+import Button from "../../components/Button.astro";
+---
+
+<AuthLayout title="Register">
+  <section class="flex justify-center">
+    <h1 class="w-[284px] text-2xl text-center font-bold mt-[66px]">
+      Create your <span class="text-[#A8FF35]">Sponsorify</span> account
+    </h1>
+  </section>
+  <section class="my-6 w-full flex justify-center">
+    <div class="md:border mt-16 md:py-20 md:w-1/2 md:rounded-lg">
+      <form method="post" class="flex flex-col items-center gap-3">
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Role Type</span>
+          </div>
+          <select class="select select-bordered w-full max-w-xs">
+            <option>Event Organizer</option>
+            <option>Sponsorship</option>
+          </select>
+        </label>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Full Name</span>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter your full name"
+            name="email"
+            class="input input-bordered w-full max-w-xs border-2"
+          />
+        </label>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Email</span>
+          </div>
+          <input
+            type="text"
+            placeholder="Enter your email address"
+            name="email"
+            class="input input-bordered w-full max-w-xs border-2"
+          />
+        </label>
+
+        <label class="form-control w-full max-w-xs">
+          <div class="label">
+            <span class="label-text">Password</span>
+          </div>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            class="input input-bordered w-full max-w-x border-2"
+          />
+        </label>
+
+        <label class="form-control w-full max-w-xs mt">
+          <div class="label">
+            <span class="label-text">Confirm Password</span>
+          </div>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            class="input input-bordered w-full max-w-x border-2"
+          />
+        </label>
+        <div class="mt-6">
+          <Button>Register</Button>
+        </div>
+      </form>
+      <p class="flex justify-center gap-2 mt-16">
+        Have an account ? <a href="/login" class="font-bold text-[#A8FF35]"
+          >Login</a
+        >
+      </p>
+    </div>
+  </section>
+</AuthLayout>
