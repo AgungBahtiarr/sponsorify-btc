@@ -1,13 +1,49 @@
 ---
-
+import { Menu } from "lucide-astro";
+const { title } = Astro.props;
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - Sponsorify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body> </body>
+  <body>
+    <nav class="relative z-10">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-2xl font-bold" href="/">Sponsorify</a>
+        </div>
+        <div class="flex-none md:hidden">
+          <div class="drawer drawer-end mx-4">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <label for="my-drawer-4" class="drawer-button"><Menu /></label>
+            </div>
+            <div class="drawer-side">
+              <label
+                for="my-drawer-4"
+                aria-label="close sidebar"
+                class="drawer-overlay"></label>
+              <ul
+                class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
+              >
+                <li><a>Sidebar Item 1</a></li>
+                <li><a>Sidebar Item 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <slot />
+  </body>
 </html>
