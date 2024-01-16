@@ -17,11 +17,36 @@ const { title } = Astro.props;
     />
   </head>
   <body>
-    <nav class="relative z-10">
-      <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-2xl font-bold" href="/">Sponsorify</a>
+    <nav class="relative z-10 w-full">
+      <div class="navbar bg-base-100 lg:my-8">
+        <div class="md:flex md:justify-between w-full">
+          <div class="">
+            <a class="btn btn-ghost text-2xl font-bold lg:pl-6" href="/"
+              >Sponsorify</a
+            >
+          </div>
+
+          <div class="hidden md:block">
+            <ul class="flex gap-10">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Testimony</a></li>
+            </ul>
+          </div>
+
+          <div class="hidden md:block">
+            <div class="flex gap-4 items-center">
+              <a href="/login" class="font-semibold">Login</a>
+              <a
+                href="/register"
+                class="py-3 px-8 rounded-[40px] bg-white text-black font-semibold"
+                >Register</a
+              >
+            </div>
+          </div>
         </div>
+
         <div class="flex-none md:hidden">
           <div class="drawer drawer-end mx-4">
             <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
@@ -36,8 +61,12 @@ const { title } = Astro.props;
               <ul
                 class="menu p-4 w-80 min-h-full bg-base-200 text-base-content"
               >
-                <li><a>Sidebar Item 1</a></li>
-                <li><a>Sidebar Item 2</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Testimony</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import mainLogo from "../../assets/images/mainlogo.png";
+import { Instagram, Mail, Twitter } from "lucide-astro";
+---
+
+<div
+  class="flex justify-between md:justify-around mx-4 md:mx-8 items-center py-7"
+>
+  <div class="flex items-center">
+    <Image src={mainLogo} width={40} alt="sponsorify" />
+    <h1 class="text-xl font-semibold">Sponsorify</h1>
+  </div>
+
+  <ul class="md:flex md:gap-3">
+    <li>Privacy Policy</li>
+    <li>Terms and Conditions</li>
+    <li>Contact Us</li>
+  </ul>
+
+  <ul class="flex flex-col md:flex-row gap-2">
+    <li><Instagram /></li>
+    <li><Mail /></li>
+    <li><Twitter /></li>
+  </ul>
+</div>

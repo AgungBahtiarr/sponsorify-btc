@@ -4,11 +4,16 @@ import StackSponsor from "../components/DashboardComponents/StackSponsor.astro";
 import Features from "../components/DashboardComponents/Features.astro";
 import Blog from "../components/DashboardComponents/Blog.astro";
 import CompanyList from "../components/DashboardComponents/CompanyList.astro";
+import Testimony from "../components/DashboardComponents/Testimony.astro";
+import Platform from "../components/DashboardComponents/Platform.astro";
+import Footer from "../components/DashboardComponents/Footer.astro";
 ---
 
 <Layout title="Dashboard">
-  <div class="mx-10 mt-7">
-    <h1 class="text-xl font-black text-center">
+  <div class="mx-10 mt-7 md:flex md:flex-col md:items-center">
+    <h1
+      class="text-xl font-black text-center md:text-3xl lg:text-6xl lg:w-[849px] lg:mt-6"
+    >
       A new era for establishing cooperation for events and sponsors.
     </h1>
     <p class="text-base font-normal text-center my-5">
@@ -20,102 +25,15 @@ import CompanyList from "../components/DashboardComponents/CompanyList.astro";
   <Features />
   <Blog />
   <CompanyList />
-
-  <div class="bg-white text-black py-16">
-    <h1 class="text-2xl font-bold text-center mx-5 py-7">
-      Friend's story Sponsorify
-    </h1>
-
-    <div class="mx-8">
-      <div class="carousel w-full">
-        <div id="item1" class="carousel-item w-[500px] h-40">
-          <div class="flex">
-            <div class="bg-[#A8FF35] flex items-center py-3 w-[40%] px-5 rounded-l-2xl">
-              <div class="flex flex-col">
-                <p class="text-[12px] text-center">
-                  “ Thank God, with sponsorify my event was able to run very
-                  successfully ”
-                </p>
-                <p class="text-[12px] text-center flex flex-col">
-                  <span class="font-semibold">@RifqiNailal</span> Chairman of the
-                  committee Campus Expo Activities
-                </p>
-              </div>
-            </div>
-            <img
-              src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-              class="w-[60%]"
-            />
-          </div>
-        </div>
-
-        <div id="item2" class="carousel-item w-full h-40">
-          <div class="flex">
-            <div class="bg-[#A8FF35] py-3 p-5 rounded-l-2xl">
-              <div class="flex flex-col">
-                <p class="text-[12px] text-center">
-                  “ Thank God, with sponsorify my event was able to run very
-                  successfully ”
-                </p>
-                <p class="text-[12px] text-center flex flex-col">
-                  <span class="font-semibold">@RifqiNailal</span> Chairman of the
-                  committee Campus Expo Activities
-                </p>
-              </div>
-            </div>
-            <img
-              src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            />
-          </div>
-        </div>
-
-        <div id="item3" class="carousel-item w-full h-40">
-          <div class="flex">
-            <div class="bg-[#A8FF35] py-3 p-5 rounded-l-2xl">
-              <div class="flex flex-col">
-                <p class="text-[12px] text-center">
-                  “ Thank God, with sponsorify my event was able to run very
-                  successfully ”
-                </p>
-                <p class="text-[12px] text-center flex flex-col">
-                  <span class="font-semibold">@RifqiNailal</span> Chairman of the
-                  committee Campus Expo Activities
-                </p>
-              </div>
-            </div>
-            <img
-              src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            />
-          </div>
-        </div>
-
-        <div id="item4" class="carousel-item w-full h-40">
-          <div class="flex">
-            <div class="bg-[#A8FF35] py-3 p-5 rounded-l-2xl">
-              <div class="flex flex-col">
-                <p class="text-[12px] text-center">
-                  “ Thank God, with sponsorify my event was able to run very
-                  successfully ”
-                </p>
-                <p class="text-[12px] text-center flex flex-col">
-                  <span class="font-semibold">@RifqiNailal</span> Chairman of the
-                  committee Campus Expo Activities
-                </p>
-              </div>
-            </div>
-            <img
-              src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex justify-center w-full py-6 gap-2">
-      <a href="#item1" class="btn btn-xs">1</a>
-      <a href="#item2" class="btn btn-xs">2</a>
-      <a href="#item3" class="btn btn-xs">3</a>
-      <a href="#item4" class="btn btn-xs">4</a>
-    </div>
+  <Testimony />
+  <Platform />
+  <div
+    class="bg-[#A8FF35] py-24 gap-8 flex flex-col justify-center items-center"
+  >
+    <h2 class="text-black font-black text-3xl text-center w-62">
+      Join us on email to connect with us
+    </h2>
+    <a href="#" class="bg-black py-4 px-8 rounded-full font-bold"> Join Now</a>
   </div>
+  <Footer />
 </Layout>

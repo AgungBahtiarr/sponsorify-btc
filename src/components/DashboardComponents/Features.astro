@@ -4,9 +4,11 @@ import { Search, ShieldHalf, MessagesSquare, Radio } from "lucide-astro";
 
 <div class="bg-[#A8FF35] text-black py-9">
   <h1 class="font-bold text-2xl text-center pb-9">Featured Features.</h1>
-  <div class="features flex flex-col items-center justify-center gap-5">
-    <div class="card px-5 pt-5 pb-14 bg-white w-64 rounded-2xl">
-      <div class="card-header flex items-center gap-4">
+  <div
+    class="features flex flex-col md:flex-row items-center justify-center gap-5 md:mx-4"
+  >
+    <div class="card px-5 h-64 bg-white w-64 rounded-2xl">
+      <div class="card-header flex items-center gap-4 my-4">
         <div class="h-7 flex items-center">
           <Search size="49px" />
         </div>
@@ -20,8 +22,8 @@ import { Search, ShieldHalf, MessagesSquare, Radio } from "lucide-astro";
       </div>
     </div>
 
-    <div class="card px-5 pt-5 pb-14 bg-white w-64 rounded-2xl">
-      <div class="card-header flex items-center gap-4">
+    <div class="card px-5 h-64 bg-white w-64 rounded-2xl">
+      <div class="card-header flex items-center gap-4 my-4">
         <div class="h-7 flex items-center">
           <ShieldHalf size="49px" />
         </div>
@@ -35,8 +37,8 @@ import { Search, ShieldHalf, MessagesSquare, Radio } from "lucide-astro";
       </div>
     </div>
 
-    <div class="card px-5 pt-5 pb-14 bg-white w-64 rounded-2xl">
-      <div class="card-header flex items-center gap-4">
+    <div class="card px-5 h-64 bg-white w-64 rounded-2xl">
+      <div class="card-header flex items-center gap-4 my-4">
         <div class="h-7 flex items-center">
           <MessagesSquare size="49px" />
         </div>
@@ -50,8 +52,8 @@ import { Search, ShieldHalf, MessagesSquare, Radio } from "lucide-astro";
       </div>
     </div>
 
-    <div class="card px-5 pt-5 pb-14 bg-white w-64 rounded-2xl">
-      <div class="card-header flex items-center gap-4">
+    <div class="card px-5 h-64 bg-white w-64 rounded-2xl">
+      <div class="card-header flex items-center gap-4 my-4">
         <div class="h-7 flex items-center">
           <Radio size="49px" />
         </div>
@@ -63,5 +65,12 @@ import { Search, ShieldHalf, MessagesSquare, Radio } from "lucide-astro";
         </p>
       </div>
     </div>
+  </div>
+
+  <div class="flex justify-center">
+    <p class="text-center my-14 mx-4 md:text-2xl lg:w-[666px]">
+      It's no longer difficult to realize your great idea and create an event
+      with sponsorship
+    </p>
   </div>
 </div>
