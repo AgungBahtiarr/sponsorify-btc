@@ -1,6 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { Menu } from "lucide-astro";
 const { title } = Astro.props;
+
+import mainLogo from "../assets/images/mainlogo.png";
 ---
 
 <html lang="en">
@@ -17,13 +20,12 @@ const { title } = Astro.props;
     />
   </head>
   <body>
-    <nav class="relative z-10 w-full">
+    <nav class="relative z-10 w-full lg:px-4">
       <div class="navbar bg-base-100 lg:my-8">
         <div class="md:flex md:justify-between w-full">
-          <div class="">
-            <a class="btn btn-ghost text-2xl font-bold lg:pl-6" href="/"
-              >Sponsorify</a
-            >
+          <div class="flex items-center">
+            <Image src={mainLogo} alt="Sponsorify" width={50} />
+            <a class="btn btn-ghost text-2xl font-bold" href="/">Sponsorify.</a>
           </div>
 
           <div class="hidden md:block">

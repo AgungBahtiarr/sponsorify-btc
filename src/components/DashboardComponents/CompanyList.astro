@@ -1,5 +1,10 @@
 ---
-
+import { Image } from "astro:assets";
+import logoPoliwangi from "../../assets/images/poliwangi.png";
+import logoKIBT from "../../assets/images/logoKIBT.jpg";
+import logoBruda from "../../assets/images/logoBruda.jpg";
+import logoKWU from "../../assets/images/logoKWU.png";
+import logoHMTI from "../../assets/images/logoHMTI.jpg";
 ---
 
 <div class="bg-white py-7">
@@ -7,22 +12,30 @@
     1000+ companies have collaborated
   </h1>
   <div class="mx-5 flex flex-row flex-wrap justify-center gap-4">
-    <div class="px-6 py-7 bg-[#F5F5F5]">
+    <div class="px-6 py-7 bg-[#F5F5F5] flex items-center gap-4">
+      <Image src={logoPoliwangi} alt="poliwangi" width={60} />
       <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
     </div>
-    <div class="px-6 py-7 bg-[#F5F5F5]">
-      <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
+    <div class="px-6 py-7 bg-[#F5F5F5] flex items-center gap-4">
+      <Image src={logoKIBT} alt="poliwangi" width={60} />
+      <h3 class="text-2xl font-extrabold text-black text-center">
+        Inkubistek Poliwangi
+      </h3>
     </div>
-    <div class="px-6 py-7 bg-[#F5F5F5]">
-      <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
+    <div class="px-6 py-7 bg-[#F5F5F5] flex items-center gap-4">
+      <Image src={logoBruda} alt="poliwangi" width={60} />
+      <h3 class="text-2xl font-extrabold text-black text-center">
+        The bruda creative
+      </h3>
     </div>
-    <div class="px-6 py-7 bg-[#F5F5F5]">
-      <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
+    <div class="px-6 py-7 bg-[#F5F5F5] flex items-center gap-4">
+      <Image src={logoKWU} alt="poliwangi" width={60} />
+      <h3 class="text-2xl font-extrabold text-black text-center">
+        KWU Poliwangi
+      </h3>
     </div>
-    <div class="px-6 py-7 bg-[#F5F5F5]">
-      <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
-    </div>
-    <div class="px-6 py-7 bg-[#F5F5F5]">
+    <div class="px-6 py-7 bg-[#F5F5F5] flex items-center gap-4">
+      <Image src={logoHMTI} alt="poliwangi" width={60} />
       <h3 class="text-2xl font-extrabold text-black text-center">Poliwangi</h3>
     </div>
   </div>
