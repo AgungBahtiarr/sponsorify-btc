@@ -6,6 +6,7 @@ import Blog from "../components/DashboardComponents/Blog.astro";
 import CompanyList from "../components/DashboardComponents/CompanyList.astro";
 import Testimony from "../components/DashboardComponents/Testimony.astro";
 import Platform from "../components/DashboardComponents/Platform.astro";
+import Join from "../components/DashboardComponents/Join.astro";
 import Footer from "../components/DashboardComponents/Footer.astro";
 ---
 
@@ -27,13 +28,6 @@ import Footer from "../components/DashboardComponents/Footer.astro";
   <CompanyList />
   <Testimony />
   <Platform />
-  <div
-    class="bg-[#A8FF35] py-24 gap-8 flex flex-col justify-center items-center"
-  >
-    <h2 class="text-black font-black text-3xl text-center w-62">
-      Join us on email to connect with us
-    </h2>
-    <a href="#" class="bg-black py-4 px-8 rounded-full font-bold"> Join Now</a>
-  </div>
   <Footer />
+  <Join />
 </Layout>
