@@ -1,0 +1,49 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import { Search, MapPin } from "lucide-astro";
+---
+
+<Layout title="Dashboard">
+  <div
+    class="bg-[#A8FF35] px-5 pt-6 md:flex md:justify-center md:items-center w-screen"
+  >
+    <div class="w-full">
+      <h1 class="text-black text-lg font-semibold xl:mx-44">Search for sponsorship</h1>
+      <form
+        action=""
+        class="flex flex-col md:flex-row gap-4 items-center justify-center py-4"
+      >
+        <label for="searchname" class="flex relative">
+          <input
+            name="searchname"
+            type="text"
+            placeholder="Sponsor name"
+            class="input input-bordered w-full max-w-xs rounded-xl border-white placeholder-white pl-6"
+          />
+          <Search class="absolute justify-end self-center w-full pl-60" />
+        </label>
+
+        <label for="searchlocation" class="flex relative">
+          <input
+            name="searchlocation"
+            type="text"
+            placeholder="Sponsor location"
+            class="input input-bordered w-full max-w-xs rounded-xl border-white placeholder-white pl-6"
+          />
+          <MapPin class="absolute justify-end self-center w-full pl-60" />
+        </label>
+        <select
+          class="select select-bordered rounded-xl border-white w-full max-w-xs"
+        >
+          <option>Han Solo</option>
+          <option>Greedo</option>
+        </select>
+
+        <button class="bg-white px-8 py-4 rounded-full text-black font-semibold"
+          >Search</button
+        >
+      </form>
+    </div>
+  </div>
+</Layout>
